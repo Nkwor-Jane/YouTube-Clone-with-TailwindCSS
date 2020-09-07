@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Youtube UI With TailwindCSS</title>
+</head>
+<body class="bg-gray-100">
+        <div class="top-bar grid grid-cols-12 bg-white py-2 shadow ">
+            <div class="col-span-2">
+               <div class="flex items-center">
+                   <div class="mr-3 ml-2 ">
+                        <a href="#">
+                        <svg viewBox="0 0 20 20" fill="currentColor" class="menu w-4 h-4 mt-1">
+                            <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+                        </a>
+                    </div>
+                  <!-- youtube logo -->
+                  <div class=" mr-2 w-20">
+                      <a href="#">
+                      <svg viewBox="0 0 200 60" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope ytd-topbar-logo-renderer" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g viewBox="0 0 200 60" preserveAspectRatio="xMidYMid meet" class="style-scope ytd-topbar-logo-renderer">
+                        <g class="style-scope ytd-topbar-logo-renderer">
+                          <path fill="#FF0000" d="M63,14.87c-0.72-2.7-2.85-4.83-5.56-5.56C52.54,8,32.88,8,32.88,8S13.23,8,8.32,9.31
+                            c-2.7,0.72-4.83,2.85-5.56,5.56C1.45,19.77,1.45,30,1.45,30s0,10.23,1.31,15.13c0.72,2.7,2.85,4.83,5.56,5.56
+                            C13.23,52,32.88,52,32.88,52s19.66,0,24.56-1.31c2.7-0.72,4.83-2.85,5.56-5.56C64.31,40.23,64.31,30,64.31,30
+                            S64.31,19.77,63,14.87z" class="style-scope ytd-topbar-logo-renderer"></path>
+                          <polygon fill="#FFFFFF" points="26.6,39.43 42.93,30 26.6,20.57" class="style-scope ytd-topbar-logo-renderer"></polygon>
+                        </g>
+                        <g class="style-scope ytd-topbar-logo-renderer">
+                          <g id="youtube-paths" class="style-scope ytd-topbar-logo-renderer">
+                            <path fill="#282828" d="M92.69,48.03c-1.24-0.84-2.13-2.14-2.65-3.91c-0.52-1.77-0.79-4.12-0.79-7.06v-4
+                              c0-2.97,0.3-5.35,0.9-7.15c0.6-1.8,1.54-3.11,2.81-3.93c1.27-0.82,2.94-1.24,5.01-1.24c2.04,0,3.67,0.42,4.9,1.26
+                              c1.23,0.84,2.13,2.15,2.7,3.93c0.57,1.78,0.85,4.16,0.85,7.12v4c0,2.94-0.28,5.3-0.83,7.08c-0.55,1.78-1.45,3.09-2.7,3.91
+                              c-1.24,0.82-2.93,1.24-5.06,1.24C95.65,49.29,93.93,48.87,92.69,48.03z M99.66,43.71c0.34-0.9,0.52-2.37,0.52-4.4v-8.59
+                              c0-1.98-0.17-3.42-0.52-4.34c-0.34-0.91-0.95-1.37-1.82-1.37c-0.84,0-1.43,0.46-1.78,1.37c-0.34,0.91-0.52,2.36-0.52,4.34v8.59
+                              c0,2.04,0.16,3.51,0.49,4.4c0.33,0.9,0.93,1.35,1.8,1.35C98.71,45.06,99.31,44.61,99.66,43.71z" class="style-scope ytd-topbar-logo-renderer"></path>
+                            <path fill="#282828" d="M188.16,37.13v1.39c0,1.77,0.05,3.09,0.16,3.98c0.1,0.88,0.32,1.53,0.65,1.93
+                              c0.33,0.4,0.84,0.61,1.53,0.61c0.93,0,1.57-0.36,1.91-1.08c0.34-0.72,0.53-1.92,0.56-3.6l5.35,0.31
+                              c0.03,0.24,0.04,0.57,0.04,0.99c0,2.55-0.7,4.45-2.09,5.71c-1.39,1.26-3.36,1.89-5.91,1.89c-3.06,0-5.2-0.96-6.43-2.88
+                              c-1.23-1.92-1.84-4.88-1.84-8.9v-4.81c0-4.14,0.64-7.15,1.91-9.06c1.27-1.9,3.45-2.85,6.54-2.85c2.13,0,3.76,0.39,4.9,1.17
+                              c1.14,0.78,1.94,1.99,2.41,3.64c0.46,1.65,0.7,3.93,0.7,6.83v4.72H188.16z M188.95,25.53c-0.31,0.39-0.52,1.03-0.63,1.91
+                              c-0.11,0.88-0.16,2.23-0.16,4.02v1.98h4.54v-1.98c0-1.77-0.06-3.11-0.18-4.02c-0.12-0.91-0.34-1.56-0.65-1.93
+                              c-0.31-0.37-0.8-0.56-1.46-0.56C189.75,24.94,189.26,25.14,188.95,25.53z" class="style-scope ytd-topbar-logo-renderer"></path>
+                            <path fill="#282828" d="M77.59,36.61l-7.06-25.49h6.16l2.47,11.55c0.63,2.85,1.09,5.27,1.39,7.28h0.18
+                              c0.21-1.44,0.67-3.85,1.39-7.24l2.56-11.6h6.16L83.7,36.61v12.23h-6.11V36.61z" class="style-scope ytd-topbar-logo-renderer"></path>
+                            <path fill="#282828" d="M126.45,21.28v27.55h-4.85l-0.54-3.37h-0.13c-1.32,2.55-3.3,3.82-5.93,3.82c-1.83,0-3.18-0.6-4.05-1.8
+                              c-0.87-1.2-1.3-3.07-1.3-5.62V21.28h6.2v20.23c0,1.23,0.13,2.11,0.4,2.63c0.27,0.52,0.72,0.79,1.35,0.79
+                              c0.54,0,1.06-0.16,1.55-0.49c0.49-0.33,0.86-0.75,1.1-1.26V21.28H126.45z" class="style-scope ytd-topbar-logo-renderer"></path>
+                            <path fill="#282828" d="M158.27,21.28v27.55h-4.85l-0.54-3.37h-0.13c-1.32,2.55-3.3,3.82-5.93,3.82c-1.83,0-3.18-0.6-4.05-1.8
+                              c-0.87-1.2-1.3-3.07-1.3-5.62V21.28h6.2v20.23c0,1.23,0.13,2.11,0.4,2.63c0.27,0.52,0.72,0.79,1.35,0.79
+                              c0.54,0,1.06-0.16,1.55-0.49c0.49-0.33,0.86-0.75,1.1-1.26V21.28H158.27z" class="style-scope ytd-topbar-logo-renderer"></path>
+                            <path fill="#282828" d="M143.31,16.11h-6.16v32.72h-6.07V16.11h-6.16v-4.99h18.38V16.11z" class="style-scope ytd-topbar-logo-renderer"></path>
+                            <path fill="#282828" d="M178.8,25.69c-0.38-1.74-0.98-3-1.82-3.78c-0.84-0.78-1.99-1.17-3.46-1.17c-1.14,0-2.2,0.32-3.19,0.97
+                              c-0.99,0.64-1.75,1.49-2.29,2.54h-0.05l0-14.52h-5.98v39.11h5.12l0.63-2.61h0.13c0.48,0.93,1.2,1.66,2.16,2.2
+                              c0.96,0.54,2.02,0.81,3.19,0.81c2.1,0,3.64-0.97,4.63-2.9c0.99-1.93,1.48-4.95,1.48-9.06v-4.36
+                              C179.36,29.84,179.17,27.43,178.8,25.69z M173.11,36.93c0,2.01-0.08,3.58-0.25,4.72c-0.16,1.14-0.44,1.95-0.83,2.43
+                              c-0.39,0.48-0.91,0.72-1.57,0.72c-0.51,0-0.98-0.12-1.42-0.36c-0.43-0.24-0.79-0.6-1.06-1.08V27.71
+                              c0.21-0.75,0.57-1.36,1.08-1.84c0.51-0.48,1.06-0.72,1.66-0.72c0.63,0,1.12,0.25,1.46,0.74c0.34,0.49,0.58,1.33,0.72,2.49
+                              c0.13,1.17,0.2,2.83,0.2,4.99V36.93z" class="style-scope ytd-topbar-logo-renderer"></path>
+                          </g>
+                        </g>
+                      </g></svg>
+                    </a>
+                    </div>
+               </div> 
+            </div>
+            <div class="col-span-10 flex justify-between">
+                <div class="w-3/5">
+                    <form class="flex">
+                        <input type="text" placeholder="Search" class=" border border-gray-500 ml-10 pl-1 text-gray-600">
+                        <button class="border-r border-t border-b border-gray-500 hover:opacity-50 bg-gray-200 px-2" type="submit">
+                            <svg viewBox="0 0 20 20" fill="currentColor" class="search w-4 h-4"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg></button>
+                    </form>
+                </div>
+                <div class="flex ">
+                    <div class="h-3 w-3 mr-6 text-gray-800"><a href="#"><svg viewBox="0 0 20 20" fill="currentColor" class="video-camera w-6 h-6"><path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z"></path></svg></a></div>
+                    <div class="h-3 w-3 mr-6 text-gray-800"><a href="#"><svg viewBox="0 0 20 20" fill="currentColor" class="view-grid w-6 h-6"><path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg></a></div>
+                    <div class="h-3 w-3 mr-6 text-gray-800"><a href="#"><svg viewBox="0 0 20 20" fill="currentColor" class="dots-vertical w-6 h-6"><path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"></path></svg></a></div>
+                    <button class="border border-blue-600 uppercase text-blue-600 px-2 text-fontCustom mr-2">
+                        <a href="#">
+                            <svg viewBox="0 0 20 20" fill="currentColor" class="user-circle w-4 h-4 inline-block"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clip-rule="evenodd"></path></svg>
+                            sign in 
+                        </a></button>
+                </div>
+            </div>
+        </div>
+        <!-- header complete -->
+
+        <!-- youtube body -->
+        <div class="grid grid-cols-12">
+            <div class="col-span-2 bg-white min-h-screen">
+                <div class=" hover:bg-gray-300  text-fontCustom text-black ">
+                    <a href="#" class="flex items-center ml-3 py-2 px-3 mb-1 ">
+                        <svg viewBox="0 0 20 20" fill="currentColor" class="home w-4 h-4 text-red-600 mr-3"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path></svg>
+                        Home
+                    </a>
+                </div>
+                <div class=" hover:bg-gray-300  text-fontCustom text-black ">
+                    <a href="#" class="flex items-center ml-3 py-2 px-3 mb-1">
+                        <svg viewBox="0 0 20 20" fill="currentColor" class="fire w-4 h-4 text-gray-600 mr-2"><path fill-rule="evenodd" d="M11.757 2.034a1 1 0 01.638.519c.483.967.844 1.554 1.207 2.03.368.482.756.876 1.348 1.467A6.985 6.985 0 0117 11a7.002 7.002 0 01-14 0c0-1.79.684-3.583 2.05-4.95a1 1 0 011.707.707c0 1.12.07 1.973.398 2.654.18.374.461.74.945 1.067.116-1.061.328-2.354.614-3.58.225-.966.505-1.93.839-2.734.167-.403.356-.785.57-1.116.208-.322.476-.649.822-.88a1 1 0 01.812-.134zm.364 13.087A2.998 2.998 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879.586.585.879 1.353.879 2.121s-.293 1.536-.879 2.121z" clip-rule="evenodd"></path></svg>
+                        Trending
+                    </a>
+                </div>
+                <div class=" hover:bg-gray-300 text-black ">
+                    <a href="#" class="flex items-center ml-3 py-2 px-1 mb-3 text-fontCustom">
+                        <svg viewBox="0 0 20 20" fill="currentColor" class="duplicate w-4 h-4 text-gray-600 mr-2"><path d="M7 9a2 2 0 012-2h6a2 2 0 012 2v6a2 2 0 01-2 2H9a2 2 0 01-2-2V9z"></path><path d="M5 3a2 2 0 00-2 2v6a2 2 0 002 2V5h8a2 2 0 00-2-2H5z"></path></svg>
+                        Subscriptions
+                    </a>
+                </div>
+                <hr>
+
+                <div class=" hover:bg-gray-300  text-fontCustom text-black ">
+                    <a href="#" class="flex items-center ml-3 py-2 px-3 mb-1 ">
+                        <svg viewBox="0 0 20 20" fill="currentColor" class="cash w-4 h-4 text-gray-600 mr-2"><path fill-rule="evenodd" d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
+                        Library
+                    </a>
+                </div>
+                <div class=" hover:bg-gray-300  text-fontCustom text-black ">
+                    <a href="#" class="flex items-center ml-3 py-2 px-3 mb-3">
+                        <svg viewBox="0 0 20 20" fill="currentColor" class="clock w-4 h-4 text-gray-600 mr-2"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path></svg>
+                      History
+                    </a>
+                </div>
+                <hr>
+                <div class="mb-2">
+                   <p class="mt-2 text-black text-fontCustom ml-3 mb-2">Sign in to like videos, comment, and subscibe.</p> 
+                    <button class="border border-blue-600 uppercase text-blue-600 py-1 px-2 text-fontCustom mr-2 ml-3">
+                        <a href="#">
+                            <svg viewBox="0 0 20 20" fill="currentColor" class="user-circle w-4 h-4 inline-block"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clip-rule="evenodd"></path></svg>
+                            sign in 
+                        </a></button>  
+                </div>
+                <hr>
+
+                <div>
+                    <p class="uppercase text-fontCustom text-gray-500 ml-4 my-2 font-medium">best of youtube</p>
+
+                    <div class=" hover:bg-gray-300  text-fontCustom text-black ">
+                        <a href="#" class="flex items-center ml-3  py-2 px-3 mb-1 ">
+                            <svg viewBox="0 0 20 20" fill="currentColor" class="music-note w-4 h-4 text-gray-600 mr-2"><path d="M18 3a1 1 0 00-1.196-.98l-10 2A1 1 0 006 5v9.114A4.369 4.369 0 005 14c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V7.82l8-1.6v5.894A4.37 4.37 0 0015 12c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V3z"></path></svg>
+                           Music
+                        </a>
+                    </div>
+                    <div class=" hover:bg-gray-300  text-fontCustom text-black ">
+                        <a href="#" class="flex items-center ml-3 py-2 px-3 mb-1">
+                            <svg viewBox="0 0 20 20" fill="currentColor" class="globe-alt w-4 h-4 text-gray-600 mr-2"><path fill-rule="evenodd" d="M4.083 9h1.946c.089-1.546.383-2.97.837-4.118A6.004 6.004 0 004.083 9zM10 2a8 8 0 100 16 8 8 0 000-16zm0 2c-.076 0-.232.032-.465.262-.238.234-.497.623-.737 1.182-.389.907-.673 2.142-.766 3.556h3.936c-.093-1.414-.377-2.649-.766-3.556-.24-.56-.5-.948-.737-1.182C10.232 4.032 10.076 4 10 4zm3.971 5c-.089-1.546-.383-2.97-.837-4.118A6.004 6.004 0 0115.917 9h-1.946zm-2.003 2H8.032c.093 1.414.377 2.649.766 3.556.24.56.5.948.737 1.182.233.23.389.262.465.262.076 0 .232-.032.465-.262.238-.234.498-.623.737-1.182.389-.907.673-2.142.766-3.556zm1.166 4.118c.454-1.147.748-2.572.837-4.118h1.946a6.004 6.004 0 01-2.783 4.118zm-6.268 0C6.412 13.97 6.118 12.546 6.03 11H4.083a6.004 6.004 0 002.783 4.118z" clip-rule="evenodd"></path></svg>      
+                         Sports   
+                        </a>
+                    </div>
+                    <div class=" hover:bg-gray-300  text-fontCustom text-black ">
+                        <a href="#" class="flex items-center ml-3 py-2 px-3 mb-1">
+                            <svg viewBox="0 0 20 20" fill="currentColor" class="globe w-4 h-4 text-gray-600 mr-2"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM4.332 8.027a6.012 6.012 0 011.912-2.706C6.512 5.73 6.974 6 7.5 6A1.5 1.5 0 019 7.5V8a2 2 0 004 0 2 2 0 011.523-1.943A5.977 5.977 0 0116 10c0 .34-.028.675-.083 1H15a2 2 0 00-2 2v2.197A5.973 5.973 0 0110 16v-2a2 2 0 00-2-2 2 2 0 01-2-2 2 2 0 00-1.668-1.973z" clip-rule="evenodd"></path></svg>
+                         Gaming   
+                        </a>
+                    </div>
+                    <div class=" hover:bg-gray-300  text-fontCustom text-black ">
+                        <a href="#" class="flex items-center ml-3 py-2 px-3 mb-1">
+                            <svg viewBox="0 0 20 20" fill="currentColor" class="newspaper w-4 h-4 text-gray-600 mr-2"><path fill-rule="evenodd" d="M2 5a2 2 0 012-2h8a2 2 0 012 2v10a2 2 0 002 2H4a2 2 0 01-2-2V5zm3 1h6v4H5V6zm6 6H5v2h6v-2z" clip-rule="evenodd"></path><path d="M15 7h1a2 2 0 012 2v5.5a1.5 1.5 0 01-3 0V7z"></path></svg>
+                         News   
+                        </a>
+                    </div>
+                    <div class=" hover:bg-gray-300  text-fontCustom text-black ">
+                        <a href="#" class="flex items-center  ml-3 py-2 px-3 mb-1">
+                            <svg viewBox="0 0 20 20" fill="currentColor" class="status-online w-4 h-4 text-gray-600 mr-2"><path fill-rule="evenodd" d="M5.05 3.636a1 1 0 010 1.414 7 7 0 000 9.9 1 1 0 11-1.414 1.414 9 9 0 010-12.728 1 1 0 011.414 0zm9.9 0a1 1 0 011.414 0 9 9 0 010 12.728 1 1 0 11-1.414-1.414 7 7 0 000-9.9 1 1 0 010-1.414zM7.879 6.464a1 1 0 010 1.414 3 3 0 000 4.243 1 1 0 11-1.415 1.414 5 5 0 010-7.07 1 1 0 011.415 0zm4.242 0a1 1 0 011.415 0 5 5 0 010 7.072 1 1 0 01-1.415-1.415 3 3 0 000-4.242 1 1 0 010-1.415zM10 9a1 1 0 011 1v.01a1 1 0 11-2 0V10a1 1 0 011-1z" clip-rule="evenodd"></path></svg>
+                         Live   
+                        </a>
+                    </div>
+                    <div class=" hover:bg-gray-300  text-fontCustom text-black ">
+                        <a href="#" class="flex items-center ml-3 py-2 px-3 mb-3">
+                            <svg viewBox="0 0 20 20" fill="currentColor" class="cube-transparent w-4 h-4 text-gray-600 mr-2"><path fill-rule="evenodd" d="M9.504 1.132a1 1 0 01.992 0l1.75 1a1 1 0 11-.992 1.736L10 3.152l-1.254.716a1 1 0 11-.992-1.736l1.75-1zM5.618 4.504a1 1 0 01-.372 1.364L5.016 6l.23.132a1 1 0 11-.992 1.736L4 7.723V8a1 1 0 01-2 0V6a.996.996 0 01.52-.878l1.734-.99a1 1 0 011.364.372zm8.764 0a1 1 0 011.364-.372l1.733.99A1.002 1.002 0 0118 6v2a1 1 0 11-2 0v-.277l-.254.145a1 1 0 11-.992-1.736l.23-.132-.23-.132a1 1 0 01-.372-1.364zm-7 4a1 1 0 011.364-.372L10 8.848l1.254-.716a1 1 0 11.992 1.736L11 10.58V12a1 1 0 11-2 0v-1.42l-1.246-.712a1 1 0 01-.372-1.364zM3 11a1 1 0 011 1v1.42l1.246.712a1 1 0 11-.992 1.736l-1.75-1A1 1 0 012 14v-2a1 1 0 011-1zm14 0a1 1 0 011 1v2a1 1 0 01-.504.868l-1.75 1a1 1 0 11-.992-1.736L16 13.42V12a1 1 0 011-1zm-9.618 5.504a1 1 0 011.364-.372l.254.145V16a1 1 0 112 0v.277l.254-.145a1 1 0 11.992 1.736l-1.735.992a.995.995 0 01-1.022 0l-1.735-.992a1 1 0 01-.372-1.364z" clip-rule="evenodd"></path></svg>
+                         360 Video  
+                        </a>
+                    </div>
+                </div>
+                <hr>
+                <div class="flex items-center text-fontCustom mx-2 my-2  text-gray-500 font-medium">
+                    <svg viewBox="0 0 20 20" fill="currentColor" class="plus-circle w-4 h-4 text-gray-600 mr-2"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd"></path></svg>
+                    <p class="text-fontCustom "> Browse Channels</p>
+                </div>
+                <hr>
+
+                <div>
+                    <p class="uppercase text-fontCustom text-gray-500 px-2 py-2 font-medium">more from youtube</p>
+
+                    <div class=" hover:bg-gray-300  text-fontCustom  text-black ">
+                        <a href="#" class="flex items-center ml-3 font-normal py-2 px-2 mb-1 ">
+                            <svg viewBox="0 0 20 20" fill="currentColor" class="collection w-4 h-4 text-gray-600 mr-2"><path d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z"></path></svg>
+                           YouTube Premium
+                        </a>
+                    </div>
+                    <div class=" hover:bg-gray-300  text-fontCustom text-black ">
+                        <a href="#" class="flex items-center ml-3 py-2 px-3 mb-3">
+                            <svg viewBox="0 0 20 20" fill="currentColor" class="status-online w-4 h-4 text-gray-600 mr-2"><path fill-rule="evenodd" d="M5.05 3.636a1 1 0 010 1.414 7 7 0 000 9.9 1 1 0 11-1.414 1.414 9 9 0 010-12.728 1 1 0 011.414 0zm9.9 0a1 1 0 011.414 0 9 9 0 010 12.728 1 1 0 11-1.414-1.414 7 7 0 000-9.9 1 1 0 010-1.414zM7.879 6.464a1 1 0 010 1.414 3 3 0 000 4.243 1 1 0 11-1.415 1.414 5 5 0 010-7.07 1 1 0 011.415 0zm4.242 0a1 1 0 011.415 0 5 5 0 010 7.072 1 1 0 01-1.415-1.415 3 3 0 000-4.242 1 1 0 010-1.415zM10 9a1 1 0 011 1v.01a1 1 0 11-2 0V10a1 1 0 011-1z" clip-rule="evenodd"></path></svg>   
+                         Live   
+                        </a>
+                    </div>
+                </div>
+                <hr>
+
+                
+                <div>
+                    <div class=" hover:bg-gray-300  text-fontCustom text-black ">
+                        <a href="#" class="flex items-center ml-3  py-2 px-3 mb-1 ">
+                            <svg viewBox="0 0 20 20" fill="currentColor" class="cog w-4 h-4 text-gray-600 mr-2"><path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"></path></svg>
+                           Settings
+                        </a>
+                    </div>
+                    <div class=" hover:bg-gray-300  text-fontCustom text-black ">
+                        <a href="#" class="flex items-center ml-3 py-2 px-3 mb-1">
+                            <svg viewBox="0 0 20 20" fill="currentColor" class="flag w-4 h-4 text-gray-600 mr-2"><path fill-rule="evenodd" d="M3 6a3 3 0 013-3h10a1 1 0 01.8 1.6L14.25 8l2.55 3.4A1 1 0 0116 13H6a1 1 0 00-1 1v3a1 1 0 11-2 0V6z" clip-rule="evenodd"></path></svg> 
+                         Report history   
+                        </a>
+                    </div>
+                    <div class=" hover:bg-gray-300  text-fontCustom text-black ">
+                        <a href="#" class="flex items-center ml-3 py-2 px-3 mb-1">
+                            <svg viewBox="0 0 20 20" fill="currentColor" class="information-circle w-4 h-4 text-gray-600 mr-2"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>  
+                         Help   
+                        </a>
+                    </div>
+                    <div class=" hover:bg-gray-300  text-fontCustom text-black ">
+                        <a href="#" class="flex items-center ml-3 py-2 px-3 mb-1">
+                            <svg viewBox="0 0 20 20" fill="currentColor" class="inbox w-4 h-4 text-gray-600 mr-2"><path fill-rule="evenodd" d="M5 3a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2V5a2 2 0 00-2-2H5zm0 2h10v7h-2l-1 2H8l-1-2H5V5z" clip-rule="evenodd"></path></svg>
+                            
+                         Send Feeback   
+                        </a>
+                    </div>
+                </div>
+                <hr>
+                <div class="">
+                    <span><a href="#" class="text-fontCustom text-gray-600 font-smaller px-2">About &nbsp; Press &nbsp; Copyright</a></span>
+                    <span><a href="#" class="text-fontCustom text-gray-600 font-smaller px-2">Contact us &nbsp; Creators</a></span>
+                    <span><a href="#" class="text-fontCustom text-gray-600 font-smaller  px-1 pb-3">Advertise &nbsp; Developers</a></span>
+                </div>
+
+                <div class="">
+                    <span><a href="#" class="text-fontCustom  font-smaller text-gray-600 mx-2 my-1">Terms Privacy Policy & Safety</a></span>
+                    <span><a href="#" class="text-fontCustom  font-smaller text-gray-600 mx-2 my-1">How YouTube works</a></span>
+                    <span><a href="#" class="text-fontCustom   font-smaller text-gray-600 mx-2 my-1">Test new features</a></span>
+                </div>
+
+            </div>
+            <div class="col-span-10 container mx-auto py-4 px-5">
+                <div class="grid grid-cols-4 gap-3 mb-4">
+                    <div class="relative">
+                        <a href="#">
+                            <img src="images/ice-cream.jpg" alt="ice-cream" class="hover:opacity-50 ease-in">
+                        </a>
+                        <div class="text-fontCustom font-semibold mb-1"><a href="#" class="text-black relative">Learn how to make ice-cream cones at home.</a></div>
+                        <div class="text-fontCustom"><a href="#" class="text-gray-600 hover:text-gray-900"> Chef LePont</a></div>
+                        <div class="text-fontCustom text-gray-600">201K views &middot; 1week ago</div>
+                        <!-- <div class="text-white font-light rounded-sm bg-black text-fontCustom p-1 absolute bottom-0 right-0 my-1 mx-1">
+                            <span>10:57</span>
+                        </div> -->
+                    </div>
+                    <div  class="relative">
+                        <a href="#">
+                            <img src="images/make-pasta.jpg" alt="make-pasta" class="hover:opacity-50 ease-in">
+                        </a>
+                        <div class="text-fontCustom font-semibold mb-1"><a href="#" class="text-black relative">Spaghetti Jollof is a GO</a></div>
+                        <div class="text-fontCustom"><a href="#" class="text-gray-600 hover:text-gray-900"> Foodielicious</a></div>
+                        <div class="text-fontCustom text-gray-600">1.2M views &middot; 1year ago</div>
+                        <!-- <div class="text-white font-light rounded-sm bg-black text-fontCustom p-1 absolute bottom-0 right-0 my-1 mx-1">
+                            <span>1:20:30</span>
+                        </div> -->
+                    </div>
+                    <div  class="relative">
+                        <a href="#">
+                            <img src="images/shish-kebab.jpg" alt="shish-kebab" class="hover:opacity-50 ease-in">
+                        </a>
+                        <div class="text-fontCustom font-semibold mb-1"><a href="#" class="text-black relative">Chicken Kebab is a must have for every party</a></div>
+                        <div class="text-fontCustom"><a href="#" class="text-gray-600 hover:text-gray-900"> Sisi Bisi</a></div>
+                        <div class="text-fontCustom text-gray-600">4M views &middot; 2years ago</div>
+                        <!-- <div class="text-white font-light rounded-sm bg-black text-fontCustom p-1 absolute bottom-0 right-0 my-1 mx-1">
+                            <span>3:56</span>
+                        </div> -->
+                    </div>
+                    <div  class="relative">
+                        <a href="#">
+                            <img src="images/pasta.jpg" alt="pasta" class="hover:opacity-50 ease-in">
+                        </a>
+                        <div class="text-fontCustom font-semibold mb-1"><a href="#" class="text-black relative">Make Pasta like a PRO</a></div>
+                        <div class="text-fontCustom"><a href="#" class="text-gray-600 hover:text-gray-900"> David Graham</a></div>
+                        <div class="text-fontCustom text-gray-600">201K views &middot; 1week ago</div>
+                        <!-- <div class="text-white font-light rounded-sm bg-black text-fontCustom p-1 absolute bottom-0 right-0 my-1 mx-1">
+                            <span>50:40</span>
+                        </div> -->
+                    </div>
+                    <!-- second row -->
+                    <div class="relative">
+                        <a href="#">
+                            <img src="images/pianist.jpg" alt="pianist" class="hover:opacity-50 ease-in">
+                        </a>
+                        <div class="text-fontCustom font-semibold mb-1"><a href="#" class="text-black relative">Play the piano in 4 easy steps</a></div>
+                        <div class="text-fontCustom"><a href="#" class="text-gray-600 hover:text-gray-900"> Note Academy</a></div>
+                        <div class="text-fontCustom text-gray-600">880K views &middot; 3years ago</div>
+                        <!-- <div class="text-white font-light rounded-sm bg-black text-fontCustom p-1 absolute bottom-0 right-0 my-1 mx-1">
+                            <span>10:57</span>
+                        </div> -->
+                    </div>
+                    <div  class="relative">
+                        <a href="#">
+                            <img src="images/tie.jpg" alt="tie" class="hover:opacity-50 ease-in">
+                        </a>
+                        <div class="text-fontCustom font-semibold mb-1"><a href="#" class="text-black relative">Make a BOW for any outing</a></div>
+                        <div class="text-fontCustom"><a href="#" class="text-gray-600 hover:text-gray-900"> Gentleman's Closet</a></div>
+                        <div class="text-fontCustom text-gray-600">3M views &middot; 1year ago</div>
+                        <!-- <div class="text-white font-light rounded-sm bg-black text-fontCustom p-1 absolute bottom-0 right-0 my-1 mx-1">
+                            <span>1:20:30</span>
+                        </div> -->
+                    </div>
+                    <div  class="relative">
+                        <a href="#">
+                            <img src="images/mime-artist.jpg" alt="mime" class="hover:opacity-50 ease-in">
+                        </a>
+                        <div class="text-fontCustom font-semibold mb-1"><a href="#" class="text-black relative">Mime like never before</a></div>
+                        <div class="text-fontCustom"><a href="#" class="text-gray-600 hover:text-gray-900"> Comedy Workshop</a></div>
+                        <div class="text-fontCustom text-gray-600">2M views &middot; 3years ago</div>
+                        <!-- <div class="text-white font-light rounded-sm bg-black text-fontCustom p-1 absolute bottom-0 right-0 my-1 mx-1">
+                            <span>3:56</span>
+                        </div> -->
+                    </div>
+                    <div  class="relative">
+                        <a href="#">
+                            <img src="images/learn-code.jpg" alt="code" class="hover:opacity-50 ease-in">
+                        </a>
+                        <div class="text-fontCustom font-semibold mb-1"><a href="#" class="text-black relative">How to become a programmer</a></div>
+                        <div class="text-fontCustom"><a href="#" class="text-gray-600 hover:text-gray-900"> Learn Code</a></div>
+                        <div class="text-fontCustom text-gray-600">500K views &middot; 9months ago</div>
+                        <!-- <div class="text-white font-light rounded-sm bg-black text-fontCustom p-1 absolute bottom-0 right-0 my-1 mx-1">
+                            <span>50:40</span>
+                        </div> -->
+                    </div>   
+                </div>  <!--grid-container-->
+                <div class="border-b border-solid border-gray-500 mb-2"></div>
+                <div>
+                    <p class="text-sm font-bold text-black ml-4 mb-4">Trending</p>
+                </div>
+                <div class="grid grid-cols-4 gap-3 mb-4">
+                   
+                    <div class="relative">
+                        <a href="#">
+                            <img src="images/pianist.jpg" alt="pianist" class="hover:opacity-50 ease-in">
+                        </a>
+                        <div class="text-fontCustom font-semibold mb-1"><a href="#" class="text-black relative">Play the piano in 4 easy steps</a></div>
+                        <div class="text-fontCustom"><a href="#" class="text-gray-600 hover:text-gray-900"> Note Academy</a></div>
+                        <div class="text-fontCustom text-gray-600">880K views &middot; 3years ago</div>
+                        <!-- <div class="text-white font-light rounded-sm bg-black text-fontCustom p-1 absolute bottom-0 right-0 my-1 mx-1">
+                            <span>10:57</span>
+                        </div> -->
+                    </div>
+                    <div  class="relative">
+                        <a href="#">
+                            <img src="images/solo-violinist.jpg" alt="violin" class="hover:opacity-50 ease-in">
+                        </a>
+                        <div class="text-fontCustom font-semibold mb-1"><a href="#" class="text-black relative">Play the violin</a></div>
+                        <div class="text-fontCustom"><a href="#" class="text-gray-600 hover:text-gray-900">Music College</a></div>
+                        <div class="text-fontCustom text-gray-600">4M views &middot; 7months ago</div>
+                        <!-- <div class="text-white font-light rounded-sm bg-black text-fontCustom p-1 absolute bottom-0 right-0 my-1 mx-1">
+                            <span>1:20:30</span>
+                        </div> -->
+                    </div>
+                    <div  class="relative">
+                        <a href="#">
+                            <img src="images/band.jpg" alt="music" class="hover:opacity-50 ease-in">
+                        </a>
+                        <div class="text-fontCustom font-semibold mb-1"><a href="#" class="text-black relative">Play in an Orchestra</a></div>
+                        <div class="text-fontCustom"><a href="#" class="text-gray-600 hover:text-gray-900"> Noorim School</a></div>
+                        <div class="text-fontCustom text-gray-600">785K views &middot; 1year ago</div>
+                        <!-- <div class="text-white font-light rounded-sm bg-black text-fontCustom p-1 absolute bottom-0 right-0 my-1 mx-1">
+                            <span>3:56</span>
+                        </div> -->
+                    </div>
+                    <div  class="relative">
+                        <a href="#">
+                            <img src="images/closet.jpg" alt="closet" class="hover:opacity-50 ease-in">
+                        </a>
+                        <div class="text-fontCustom font-semibold mb-1"><a href="#" class="text-black relative">Make your own walk-in closet</a></div>
+                        <div class="text-fontCustom"><a href="#" class="text-gray-600 hover:text-gray-900"> DIY-Closet</a></div>
+                        <div class="text-fontCustom text-gray-600">610K views &middot; 10months ago</div>
+                        <!-- <div class="text-white font-light rounded-sm bg-black text-fontCustom p-1 absolute bottom-0 right-0 my-1 mx-1">
+                            <span>50:40</span>
+                        </div> -->
+                    </div> 
+                </div>
+                <div>
+                    <div class="flex items-center justify-center mt-4 mb-2">
+                        <a href="#">
+                            <svg viewBox="0 0 20 20" fill="currentColor" class="chevron-down w-4 h-4"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                        </a>
+                    </div>
+                    <div class="border-b border-solid border-gray-500 mb-4"></div>
+                </div>
+                <div class="grid grid-cols-4 gap-3 mb-4"> <!--fourth row-->
+                <div  class="relative">
+                    <a href="#">
+                        <img src="images/pasta.jpg" alt="pasta" class="hover:opacity-50 ease-in">
+                    </a>
+                    <div class="text-fontCustom font-semibold mb-1"><a href="#" class="text-black relative">Make Pasta like a PRO</a></div>
+                    <div class="text-fontCustom"><a href="#" class="text-gray-600 hover:text-gray-900"> David Graham</a></div>
+                    <div class="text-fontCustom text-gray-600">201K views &middot; 1week ago</div>
+                    <!-- <div class="text-white font-light rounded-sm bg-black text-fontCustom p-1 absolute bottom-0 right-0 my-1 mx-1">
+                        <span>50:40</span>
+                    </div> -->
+                </div>
+                
+                <div class="relative">
+                    <a href="#">
+                        <img src="images/pianist.jpg" alt="pianist" class="hover:opacity-50 ease-in">
+                    </a>
+                    <div class="text-fontCustom font-semibold mb-1"><a href="#" class="text-black relative">Play the piano in 4 easy steps</a></div>
+                    <div class="text-fontCustom"><a href="#" class="text-gray-600 hover:text-gray-900"> Note Academy</a></div>
+                    <div class="text-fontCustom text-gray-600">880K views &middot; 3years ago</div>
+                    <!-- <div class="text-white font-light rounded-sm bg-black text-fontCustom p-1 absolute bottom-0 right-0 my-1 mx-1">
+                        <span>10:57</span>
+                    </div> -->
+                </div>
+                <div class="relative">
+                    <a href="#">
+                        <img src="images/amend-clothes.jpg" alt="clothes" class="hover:opacity-50 ease-in">
+                    </a>
+                    <div class="text-fontCustom font-semibold mb-1"><a href="#" class="text-black relative">20 ways to amend your clothes</a></div>
+                    <div class="text-fontCustom"><a href="#" class="text-gray-600 hover:text-gray-900"> Everyday-DIY's</a></div>
+                    <div class="text-fontCustom text-gray-600">980K views &middot; 6days ago</div>
+                    <!-- <div class="text-white font-light rounded-sm bg-black text-fontCustom p-1 absolute bottom-0 right-0 my-1 mx-1">
+                        <span>10:57</span>
+                    </div> -->
+                </div>
+                <div class="relative">
+                    <a href="#">
+                        <img src="images/baby-clothes.jpg" alt="clothes" class="hover:opacity-50 ease-in">
+                    </a>
+                    <div class="text-fontCustom font-semibold mb-1"><a href="#" class="text-black relative">Make your Baby's Clothes</a></div>
+                    <div class="text-fontCustom"><a href="#" class="text-gray-600 hover:text-gray-900"> Baby School</a></div>
+                    <div class="text-fontCustom text-gray-600">10days views &middot; 2days ago</div>
+                    <!-- <div class="text-white font-light rounded-sm bg-black text-fontCustom p-1 absolute bottom-0 right-0 my-1 mx-1">
+                        <span>10:57</span>
+                    </div> -->
+                </div>
+                </div>
+            </div>
+            </div> <!--left-side-container-->
+        </div> <!--youtube-body -->
+</body>
+</html>
