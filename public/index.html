@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="style.css">
     <title>Youtube UI With TailwindCSS</title>
 </head>
-<body class="bg-gray-100">
+<body class="bg-gray-100 font-custom">
         <div class="top-bar grid grid-cols-12 bg-white py-2 shadow w-full" id="nav-bar">
             <div class="col-span-2">
                <div class="flex items-center">
@@ -68,8 +68,8 @@
             <div class="col-span-10 flex justify-between">
                 <div class="w-3/5">
                     <form class="flex">
-                        <input type="text" placeholder="Search" class="w-3/5 border border-gray-500 ml-10 pl-1 text-gray-600">
-                        <button class="border-r border-t border-b border-gray-500 hover:opacity-50 bg-gray-200 px-2" type="submit">
+                        <input type="text" placeholder="Search" class="w-3/5 border border-gray-500 ml-10 px-1 h-8 text-gray-600 focus:outline-none focus:border-blue-600">
+                        <button class="border-r border-t border-b border-gray-500 hover:opacity-50 bg-gray-200 h-8 px-3" type="submit">
                             <svg viewBox="0 0 20 20" fill="currentColor" class="search w-4 h-4"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg></button>
                     </form>
                 </div>
@@ -89,7 +89,7 @@
 
         <!-- youtube body -->
         <div class="grid grid-cols-12">
-            <div class="col-span-2 bg-white min-h-screen mt-1 ">
+            <div class="col-span-2 bg-white min-h-screen mt-1">
                 <div class=" hover:bg-gray-300  text-xs text-black ">
                     <a href="#" class="flex items-center ml-3 py-2 px-3 mb-1 ">
                         <svg viewBox="0 0 20 20" fill="currentColor" class="home w-4 h-4 text-red-600 mr-3"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path></svg>
@@ -244,11 +244,11 @@
                 </div>
             </div>
             <!-- side-bar end -->
-            <div class="col-span-10 container mx-auto py-4 px-5 mt-2 ">
+            <div class="col-span-10 container mx-auto py-4 px-5 mt-2">
                 <div class="grid grid-cols-4 gap-3 mb-4">
                     <div class="relative">
                         <a href="#">
-                            <img src="images/ice-cream.jpg" alt="ice-cream" class="hover:opacity-50 ease-in">
+                            <img src="images/ice-cream.jpg" alt="ice-cream" class="hover:opacity-50 ease-in pb-1">
                         </a>
                         <div class="text-xs font-semibold mb-1"><a href="#" class="text-black relative p-2">Learn how to make ice-cream cones at home.</a></div>
                         <div class="text-xs"><a href="#" class="text-gray-600 hover:text-gray-900"> Chef LePont</a></div>
